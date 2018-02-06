@@ -33,22 +33,24 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Datos Personales: " />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/etnombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="Nombre Completo" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/ettelefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:hint="Teléfono"
+            android:maxLength="9"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,20 +58,20 @@
             android:orientation="horizontal">
 
             <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
+                android:id="@+id/spdias"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="match_parent"
+                android:id="@+id/spmeses"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <Spinner
-                android:id="@+id/spinner3"
-                android:layout_width="match_parent"
+                android:id="@+id/spanos"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
@@ -82,13 +84,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/datos_empleados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -97,10 +99,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Sueldo" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/etsueldo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -108,11 +110,12 @@
                 android:inputType="numberDecimal" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btniva"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:onClick="clickiva"
+                android:text="Con IVA" />
 
         </LinearLayout>
 
@@ -126,37 +129,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Prima" />
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/etprima"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
+                android:text="0"
                 android:ems="10"
                 android:inputType="numberDecimal" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnmas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:onClick="clickmas"
+                android:text="+" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnmenos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:onClick="clickmenos"
+                android:text="-" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btncalcular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Button" />
+            android:onClick="clickcalcular"
+            android:text="Calcular" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -169,10 +177,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Total" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/ettotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -184,9 +192,10 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btngenerar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
-
+        android:text="Generar"
+        android:onClick="clickgenerar"/>
+.
 </LinearLayout>
