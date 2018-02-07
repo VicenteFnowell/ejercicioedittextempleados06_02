@@ -99,6 +99,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickcalcular (View view){
+        String cajaSueldo = etSueldo.getText().toString();
+        double sueldo = Double.parseDouble(cajaSueldo);
+
+        String cajaPrima = etPrima.getText().toString();
+        int prima = Integer.parseInt(cajaPrima);
+
+        double total = sueldo + prima;
+
+        etTotal.setText(total+"");
 
     }
 
